@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.main-header {
+    background-color: #444444; 
+    padding: 1rem 0;
+}
+
+.nav-list  {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-list #dining, #rooms{
+    color: #ffffff;
+}
+.nav-list a {
+    color: #FFD700; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ffffff;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    min-height: 80vh; 
+}
+
+.grid-item {
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#img1, #img2 {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+     padding: 5%;
+  margin-right: 20px;
+   
+}
+
+.info-box {
+    background-color: #FF7F50;  
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 5%;
+    padding: 5%;
+}
+
+.inner-content {
+    background-color: #555; 
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 80%;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.inner-content h2 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.inner-content p {
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10rem;
+        padding: 0.5rem 0;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+}
